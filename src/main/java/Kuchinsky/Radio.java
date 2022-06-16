@@ -16,12 +16,14 @@ public class Radio {
       }
       this.RadioVolume = RadioVolume;
    }
-   public void increaseRadioVolume(int RadioVolume) {
+   public int increaseRadioVolume(int RadioVolume) {
       if (RadioVolume < 10) {
          RadioVolume = RadioVolume + 1;
-         return;
+         return RadioVolume;
 
       }
+
+
    }
 
 
