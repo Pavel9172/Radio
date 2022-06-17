@@ -22,9 +22,9 @@ class RadioTest {
     public void testVolmeIncrease(){
         Radio cound = new Radio();
         //cound.RadioVolume = 8;
-        cound.setRadioVolume(8);
+        cound.setRadioVolume(9);
         cound.increaseRadioVolume();
-        int expected = 9;
+        int expected = 10;
         int actual = cound.getRadioVolume();
         assertEquals(expected, actual);
 
@@ -46,9 +46,9 @@ class RadioTest {
     public void testVolumeDecrease(){
         Radio cound = new Radio();
         //cound.RadioVolume = 8;
-        cound.setRadioVolume(5);
+        cound.setRadioVolume(1);
         cound.decreaseRadioVolume();
-        int expected = 4;
+        int expected = 0;
         int actual = cound.getRadioVolume();
         assertEquals(expected, actual);
 
@@ -61,7 +61,7 @@ class RadioTest {
         cound.setRadioWave(0);
         cound.MinRadioWave();
         int expected = 9;
-        int actual = cound.getRadioVolume();
+        int actual = cound.getRadioWave();
         assertEquals(expected, actual);
 
     }
@@ -73,7 +73,29 @@ class RadioTest {
         cound.setRadioWave(9);
         cound.MaxRadioWave();
         int expected = 0;
-        int actual = cound.getRadioVolume();
+        int actual = cound.getRadioWave();
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testWaveMinLimitValue(){
+        Radio cound = new Radio();
+        //cound.RadioVolume = 8;
+        cound.setRadioWave(1);
+        cound.MinRadioWave();
+        int expected = 0;
+        int actual = cound.getRadioWave();
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testWaveMaxLimitValue(){
+        Radio cound = new Radio();
+        //cound.RadioVolume = 8;
+        cound.setRadioWave(8);
+        cound.MinRadioWave();
+        int expected = 9;
+        int actual = cound.getRadioWave();
         assertEquals(expected, actual);
 
     }

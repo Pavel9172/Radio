@@ -1,7 +1,7 @@
 package Kuchinsky;
 
 public class Radio {
-
+   public int RadioWave;
    public int RadioVolume;
    public int getRadioVolume(){
 
@@ -38,48 +38,51 @@ public class Radio {
    }
 
 
-   public int RadioWave;
    public int getRadioWave(){
 
       return RadioWave;
    }
-   private int WaveMax = 9;
-   private int WaveMin = 0;
+
+
+
+
+
 
 
    public void setRadioWave(int RadioWave) {
-      if (RadioWave < WaveMin){
+      if (RadioWave < 0){
          return;
 
       }
-      if (RadioWave > WaveMax){
+      if (RadioWave > 9){
          return;
       }
       this.RadioWave = RadioWave;
 
+
    }
 
-   public int MinRadioWave() {
-      if (RadioVolume  < 0) {
-         RadioVolume = RadioVolume - 1;{
-            if (RadioVolume - 1 < 0);
-
-         }
+   public void MinRadioWave() {
+      if (RadioWave > 0) {
+         RadioWave--;
 
 
-
+      } else {
+         RadioWave = 9;
       }
 
-      return WaveMax;
+
    }
 
-   public int MaxRadioWave() {
-      if (RadioVolume +1 > 9) {
-         RadioVolume = WaveMin;
+   public void MaxRadioWave() {
+      if (RadioWave  < 9) {
+         RadioWave++;
 
 
+      }else {
+         RadioWave = 0;
       }
-      return WaveMin;
+
 
 
    }
