@@ -93,7 +93,7 @@ class RadioTest {
         Radio cound = new Radio();
         //cound.RadioVolume = 8;
         cound.setRadioWave(8);
-        cound.MinRadioWave();
+        cound.MaxRadioWave();
         int expected = 9;
         int actual = cound.getRadioWave();
         assertEquals(expected, actual);
