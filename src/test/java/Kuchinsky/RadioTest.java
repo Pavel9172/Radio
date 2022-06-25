@@ -7,100 +7,100 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
 
     @Test
-    public void testVolumeMax(){
+    public void testVolumeMax() {
         Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-       cound.setRadioVolume(10);
-      cound.increaseRadioVolume();
-        int expected = 10;
-        int actual = cound.getRadioVolume();
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void testVolmeIncrease(){
-        Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-        cound.setRadioVolume(9);
+        //cound.radioVolume = 8;
+        cound.setradioVolume(10);
         cound.increaseRadioVolume();
         int expected = 10;
-        int actual = cound.getRadioVolume();
+        int actual = cound.getradioVolume();
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void testVolumeMin(){
+    public void testVolmeIncrease() {
         Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-        cound.setRadioVolume(0);
+        //cound.radioVolume = 8;
+        cound.setradioVolume(9);
+        cound.increaseRadioVolume();
+        int expected = 10;
+        int actual = cound.getradioVolume();
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testVolumeMin() {
+        Radio cound = new Radio();
+        //cound.radioVolume = 8;
+        cound.setradioVolume(0);
         cound.decreaseRadioVolume();
         int expected = 0;
-        int actual = cound.getRadioVolume();
+        int actual = cound.getradioVolume();
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void testVolumeDecrease(){
+    public void testVolumeDecrease() {
         Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-        cound.setRadioVolume(1);
+        //cound.radioVolume = 8;
+        cound.setradioVolume(1);
         cound.decreaseRadioVolume();
         int expected = 0;
-        int actual = cound.getRadioVolume();
+        int actual = cound.getradioVolume();
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void testWaveMin(){
+    public void testWaveMin() {
         Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-        cound.setRadioWave(0);
+        //cound.radioVolume = 8;
+        cound.setradioWave(0);
         cound.MinRadioWave();
         int expected = 9;
-        int actual = cound.getRadioWave();
+        int actual = cound.getradioWave();
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void testWaveMax(){
+    public void testWaveMax() {
         Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-        cound.setRadioWave(9);
+        //cound.radioVolume = 8;
+        cound.setradioWave(9);
         cound.MaxRadioWave();
         int expected = 0;
-        int actual = cound.getRadioWave();
+        int actual = cound.getradioWave();
         assertEquals(expected, actual);
 
     }
+
     @Test
-    public void testWaveMinLimitValue(){
+    public void testWaveMinLimitValue() {
         Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-        cound.setRadioWave(1);
+        //cound.radioVolume = 8;
+        cound.setradioWave(1);
         cound.MinRadioWave();
         int expected = 0;
-        int actual = cound.getRadioWave();
+        int actual = cound.getradioWave();
         assertEquals(expected, actual);
 
     }
+
     @Test
-    public void testWaveMaxLimitValue(){
+    public void testWaveMaxLimitValue() {
         Radio cound = new Radio();
-        //cound.RadioVolume = 8;
-        cound.setRadioWave(8);
+        //cound.radioVolume = 8;
+        cound.setradioWave(8);
         cound.MaxRadioWave();
         int expected = 9;
-        int actual = cound.getRadioWave();
+        int actual = cound.getradioWave();
         assertEquals(expected, actual);
 
     }
-
-
 
 
 }

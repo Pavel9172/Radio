@@ -1,91 +1,87 @@
 package Kuchinsky;
 
 public class Radio {
-   public int RadioWave;
-   public int RadioVolume;
-   public int getRadioVolume(){
+    public int radioWave;
+    public int radioVolume;
 
-      return RadioVolume;
-   }
+    public int getradioVolume() {
 
-   public void setRadioVolume(int RadioVolume){
-      if (RadioVolume < 0){
-         return;
-      }
-      if (RadioVolume > 10){
-         return;
-      }
-      this.RadioVolume = RadioVolume;
-   }
-   public void increaseRadioVolume() {
-      if (RadioVolume < 10) {
-         RadioVolume = RadioVolume + 1;
+        return radioVolume;
+    }
 
+    public void setradioVolume(int radioVolume) {
+        if (radioVolume < 0) {
+            return;
+        }
+        if (radioVolume > 10) {
+            return;
+        }
+        this.radioVolume = radioVolume;
+    }
 
-      }
-
-
-   }
-
-   public void decreaseRadioVolume() {
-      if (RadioVolume > 0) {
-         RadioVolume = RadioVolume - 1;
+    public void increaseRadioVolume() {
+        if (radioVolume < 10) {
+            radioVolume = radioVolume + 1;
 
 
-      }
+        }
 
 
-   }
+    }
+
+    public void decreaseRadioVolume() {
+        if (radioVolume > 0) {
+            radioVolume = radioVolume - 1;
 
 
-   public int getRadioWave(){
-
-      return RadioWave;
-   }
+        }
 
 
+    }
 
 
+    public int getradioWave() {
+
+        return radioWave;
+    }
 
 
+    public void setradioWave(int radioWave) {
+        if (radioWave < 0) {
+            return;
 
-   public void setRadioWave(int RadioWave) {
-      if (RadioWave < 0){
-         return;
-
-      }
-      if (RadioWave > 9){
-         return;
-      }
-      this.RadioWave = RadioWave;
-
-
-   }
-
-   public void MinRadioWave() {
-      if (RadioWave > 0) {
-         RadioWave--;
+        }
+        if (radioWave > 9) {
+            return;
+        }
+        this.radioWave = radioWave;
 
 
-      } else {
-         RadioWave = 9;
-      }
+    }
+
+    public void MinRadioWave() {
+        if (radioWave > 0) {
+            radioWave--;
 
 
-   }
-
-   public void MaxRadioWave() {
-      if (RadioWave  < 9) {
-         RadioWave++;
+        } else {
+            radioWave = 9;
+        }
 
 
-      }else {
-         RadioWave = 0;
-      }
+    }
+
+    public void MaxRadioWave() {
+        if (radioWave < 9) {
+            radioWave++;
 
 
+        } else {
+            radioWave = 0;
+        }
 
-   }
+
+    }
 
 
 }
