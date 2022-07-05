@@ -68,7 +68,7 @@ class RadioTest {
 
     @Test
     public void testWaveMax() {
-        Radio cound = new Radio();
+        Radio cound = new Radio(12);
         //cound.radioVolume = 8;
         cound.setradioWave(11);
         cound.MaxRadioWave();

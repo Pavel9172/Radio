@@ -8,6 +8,12 @@ public class Radio {
     public int maxRadioVjlume = 100;
     public int minRadioVolume = 0;
 
+    public Radio(){
+
+    }
+    public Radio(int stationsCount){
+        maxRadioWave = stationsCount - 1;
+    }
 
     public int getMaxRadioVjlume() {
         return maxRadioVjlume;
