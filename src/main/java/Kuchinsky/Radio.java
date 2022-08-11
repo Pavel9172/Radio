@@ -1,8 +1,8 @@
 package Kuchinsky;
 
 public class Radio {
-    public int radioWave;
-    public int radioVolume;
+    private int radioWave;
+    private int radioVolume;
 
     public int getradioVolume() {
 
@@ -21,7 +21,10 @@ public class Radio {
 
     public void increaseRadioVolume() {
         if (radioVolume < 10) {
-            radioVolume = radioVolume + 1;
+            radioVolume++;
+
+        } else {
+            radioVolume = 10;
 
 
         }
@@ -31,7 +34,11 @@ public class Radio {
 
     public void decreaseRadioVolume() {
         if (radioVolume > 0) {
-            radioVolume = radioVolume - 1;
+            radioVolume--;
+
+
+        } else {
+            radioVolume = 0;
 
 
         }

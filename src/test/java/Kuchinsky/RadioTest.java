@@ -79,7 +79,7 @@ class RadioTest {
     }
 
     @Test
-    public void testWaveMinLimitValue() {
+    public void testWaveMinLimit() {
         Radio cound = new Radio();
         //cound.radioVolume = 8;
         cound.setradioWave(1);
@@ -91,7 +91,7 @@ class RadioTest {
     }
 
     @Test
-    public void testWaveMaxLimitValue() {
+    public void testWaveMaxLimit() {
         Radio cound = new Radio();
         //cound.radioVolume = 8;
         cound.setradioWave(8);
@@ -122,6 +122,30 @@ class RadioTest {
         cound.MinRadioWave();
         int expected = 9;
         int actual = cound.getradioWave();
+        assertEquals(expected, actual);
+
+    }
+
+
+    @Test
+    public void testWaveMoreMaximum() {
+        Radio cound = new Radio();
+        //cound.radioVolume = 8;
+        cound.setradioWave(10);
+        cound.MaxRadioWave();
+        int expected = 1;
+        int actual = cound.getradioWave();
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testVolmeMoreMaximum() {
+        Radio cound = new Radio();
+        //cound.radioVolume = 8;
+        cound.setradioVolume(11);
+        cound.increaseRadioVolume();
+        int expected = 1;
+        int actual = cound.getradioVolume();
         assertEquals(expected, actual);
 
     }
