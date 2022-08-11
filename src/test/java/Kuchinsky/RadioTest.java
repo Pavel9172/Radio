@@ -102,5 +102,29 @@ class RadioTest {
 
     }
 
+    @Test
+    public void testVolumeNegative() {
+        Radio cound = new Radio();
+        //cound.radioVolume = 8;
+        cound.setradioVolume(-1);
+        cound.decreaseRadioVolume();
+        int expected = 0;
+        int actual = cound.getradioVolume();
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testNegativeWave() {
+        Radio cound = new Radio();
+        //cound.radioVolume = 8;
+        cound.setradioWave(-1);
+        cound.MinRadioWave();
+        int expected = 9;
+        int actual = cound.getradioWave();
+        assertEquals(expected, actual);
+
+    }
+
 
 }
